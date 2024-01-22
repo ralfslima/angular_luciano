@@ -1,0 +1,59 @@
+<div class="inputs">
+
+
+    <form action="" method="post">
+
+       <div>
+            <label>marca?</label>
+            <input type="text" placeholder="O que voce procura?" name="marca" [(ngModel)]="cliente.marca"> 
+       </div>
+            
+        <div>
+            <label> modelo?</label>
+            <input type="text"  placeholder="Procure as datas" name="modelo" [(ngModel)]="cliente.modelo">
+        </div>
+
+        <div>
+            <label> cor?</label>
+            <input type="text" placeholder="Procure as datas" name="cor" [(ngModel)]="cliente.cor">
+        </div>
+
+        <div>
+            <label> ano?</label>
+            <input type="number" placeholder="Procure as datas" name="ano" [(ngModel)]="cliente.ano">
+        </div>
+
+        <div>
+            <label> descricoao?</label>
+            <input type="text" placeholder="Procure a56655s" name="descricao" [(ngModel)]="cliente.descricao">
+        </div>
+
+        <input type="button" value="Cadastrar" *ngIf="bntCadastro">
+        <input type="button" value="alterar" *ngIf="!bntCadastro">
+        <input type="button" value="remover" *ngIf="!bntCadastro">
+        <input type="button" value="cancelar" *ngIf="!bntCadastro">
+
+    </form>
+    <h1>{{cliente | json}}</h1>
+    
+    <table>
+        <tbody>
+            <tr *ngFor="let c of clientes">
+                <td>{{c.marca}}</td>
+                <td>{{c.modelo}}</td>
+                <td>{{c.cor}}</td>
+                <td>{{c.ano}}</td>
+                <td>{{c.descricao}}</td>
+                <td><button>selecioooooooonar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+
+
